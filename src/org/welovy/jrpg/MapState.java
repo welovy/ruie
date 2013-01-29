@@ -59,10 +59,8 @@ public class MapState extends BasicGameState {
 		Actor player = currentStage.getActor("player");
 		float charaX = player.posX;
 		float charaY = player.posY;
-		
 		float absViewX = charaX - (viewWidth / 2 - 16);
 		float absViewY = charaY - (viewHeight / 2 - 16);
-
 
 		if (absViewX < 0) {
 			// move character

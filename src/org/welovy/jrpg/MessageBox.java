@@ -26,7 +26,6 @@ class MessageText {
 	}
 	
 	public String getDrawText(Sound typeSound) {
-		D.d("msg=" + message + ",counter=" + counter);
 		if (counter >= max) {
 			waiting = true;
 			return message;

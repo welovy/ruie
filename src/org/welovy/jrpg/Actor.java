@@ -9,7 +9,7 @@ import org.newdawn.slick.tiled.TiledMap;
 public class Actor {
 	String name;
 	public Animation sprite;
-	public int posX = 0, posY = 0;
+	public float posX = 0f, posY = 0f ;
 	
 	private Animation movementUp, movementDown, movementRight, movementLeft;
 	private SpriteSheet ssheet; 
@@ -86,10 +86,10 @@ public class Actor {
 	}
 	
 	public void moveDown(TiledMap map, long delta) {
-		faceDown();
+		this.faceDown();
 		sprite.update(delta);
 		float nextTileX = (posX + 32);
-		float nextTileY = (posY + 32 + delta*0.1f);
+		float nextTileY = (posY + 32 + delta * 0.1f);
 		int tileWidth = 16, tileHeight = 16;
 		int tileID = map.getTileId((int)nextTileX / tileWidth, (int)nextTileY / tileHeight, 1);
 		if (tileID == 0) {
@@ -98,7 +98,7 @@ public class Actor {
 	}
 	
 	public void moveLeft(TiledMap map, long delta){
-		faceLeft();
+		this.faceLeft();
 		sprite.update(delta);
 		float nextTileX = (posX - delta * 0.1f);
 		float nextTileY = (posY + 32);
@@ -110,7 +110,7 @@ public class Actor {
 	}
 	public void moveRight(TiledMap map, long delta) {
 		int tileWidth = 16, tileHeight = 16;
-		faceRight();
+		this.faceRight();
 		sprite.update(delta);
 		float nextTileX = (posX + 32 + delta * 0.1f);
 		float nextTileY = posY;
