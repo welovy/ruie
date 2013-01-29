@@ -72,6 +72,24 @@ class Dialogue extends Instruction {
 		MapState m = Ruie.getMap();
 		MessageBox box = m.getMessageBox();
 		box.addMsg(msgtext);
+	}
+}
+
+class StartDialogue extends Instruction {
+	public StartDialogue () { super(4);}
+	public void exec(Stage s, StateBasedGame sbg) {
+		MapState m = Ruie.getMap();
+		MessageBox box = m.getMessageBox();
 		box.enableDisplay();
 	}
 }
+
+class EndDialogue extends Instruction {
+	public EndDialogue () { super(5);}
+	public void exec(Stage s, StateBasedGame sbg) {
+		MapState m = Ruie.getMap();
+		MessageBox box = m.getMessageBox();
+		box.disableDisplay();
+	}
+}
+

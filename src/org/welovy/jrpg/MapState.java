@@ -125,8 +125,9 @@ public class MapState extends BasicGameState {
 		else if (input.isKeyDown(Input.KEY_RIGHT)) {
 			player.moveRight(map, delta);
 		}
-		else if (input.isKeyDown(Input.KEY_SPACE)) {
+		else if (input.isKeyPressed(Input.KEY_SPACE)) {
 			//TODO:
+			msgbox.tellKeySpaceDown();
 		}
 		
 		try {

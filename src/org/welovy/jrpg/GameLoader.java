@@ -36,6 +36,7 @@ public class GameLoader {
 		oe.add(new PlacePlayerAt("player", 10, 10));
 		oe.add(new Dialogue("“ú–{Œê‚Ì’Ç‰Á‚ª‚Ş‚¸‚©‚µ‚©‚Á‚½‚æ‚Ë"));
 		oe.add(new Dialogue("‚³‚ç‚È‚é“ú–{Œê‚ğ“ü—Í‚µ‚Ä‚İ‚é‚¨B"));
+		oe.add(new StartDialogue());
 		oe.run(sbg);
 	}
 
