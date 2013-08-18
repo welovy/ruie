@@ -49,7 +49,7 @@ class PlacePlayerAt extends Instruction {
 	int tileX;
 	int tileY;
 	public PlacePlayerAt(String name, int x, int y) {
-		super(2);
+		super(3);
 		charaName = name;
 		tileX = x;
 		tileY = y;
@@ -65,7 +65,7 @@ class PlacePlayerAt extends Instruction {
 class Dialogue extends Instruction {
 	String msgtext;
 	public Dialogue (String text){
-		super(3);
+		super(4);
 		msgtext = text;
 	}
 	public void exec(Stage s, StateBasedGame sbg) {
@@ -76,7 +76,7 @@ class Dialogue extends Instruction {
 }
 
 class StartDialogue extends Instruction {
-	public StartDialogue () { super(4);}
+	public StartDialogue () { super(5);}
 	public void exec(Stage s, StateBasedGame sbg) {
 		MapState m = Ruie.getMap();
 		MessageBox box = m.getMessageBox();
@@ -85,7 +85,7 @@ class StartDialogue extends Instruction {
 }
 
 class EndDialogue extends Instruction {
-	public EndDialogue () { super(5);}
+	public EndDialogue () { super(6);}
 	public void exec(Stage s, StateBasedGame sbg) {
 		MapState m = Ruie.getMap();
 		MessageBox box = m.getMessageBox();

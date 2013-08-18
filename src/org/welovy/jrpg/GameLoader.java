@@ -2,7 +2,6 @@ package org.welovy.jrpg;
 
 import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
 
 
@@ -15,8 +14,8 @@ public class GameLoader {
 	public void startFromBegining(StateBasedGame sbg) {
 		Event oe = new Event();
 		
-		Stage beginning = new Stage("tiled/worldmap.tmx");
-		
+		//Stage beginning = new Stage("tiled/worldmap.tmx");
+		Stage beginning = new Stage("tiled/castle.tmx");
 		Actor chara = new Actor("player", "img/player.png", 32, 32);
 		chara.setupActorUp(0, 3, 2, 3);
 		chara.setupActorDown(0, 0, 2, 0);

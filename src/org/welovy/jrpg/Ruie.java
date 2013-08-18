@@ -46,9 +46,9 @@ public class Ruie extends StateBasedGame {
 	}
 	public Ruie(String title) {
 		super(title);
-		this.addState(new MainMenuState(MAINMENUSTATE));
+		addState(new MainMenuState(MAINMENUSTATE));
 		mapView = new MapState(MAPSTATE);
-		this.addState(mapView);
+		addState(mapView);
 	}
 
 	public static MapState getMap() { return mapView; }

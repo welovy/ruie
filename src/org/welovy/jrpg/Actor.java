@@ -108,6 +108,7 @@ public class Actor {
 			posX -= delta * 0.1f;
 		}
 	}
+	
 	public void moveRight(TiledMap map, long delta) {
 		int tileWidth = 16, tileHeight = 16;
 		this.faceRight();
@@ -119,5 +120,4 @@ public class Actor {
 			posX += delta * 0.1f;
 		}
 	}
-
 }
